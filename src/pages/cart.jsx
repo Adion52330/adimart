@@ -5,12 +5,16 @@ import { useSelector } from "react-redux";
 import { selectItems } from "../slices/basketSlice";
 import { useDispatch } from "react-redux";
 import { removeFromBasket } from "../slices/basketSlice";
+import Head from 'next/head'
 
 const Cart = () => {
   const items = useSelector(selectItems);
 
   return (
     <Wrapper>
+      <Head>
+          <title>Adimart - Cart</title>
+      </Head>
       <Header />
       <br />
       <br />
