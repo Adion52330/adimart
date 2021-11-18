@@ -1,7 +1,7 @@
 import React from "react";
 import tw from "tailwind-styled-components";
 import { useDispatch } from "react-redux";
-import { addToBasket } from "../../slices/basketSlice";
+import { addToBasket } from "../slices/basketSlice";
 
 const Product = ({ src, title, price, rating }) => {
   const dispatch = useDispatch();
@@ -35,7 +35,7 @@ const Wrapper = tw.div`
 `;
 
 const ProductImage = tw.img`
-  h-64 w-64 border-b-2 m-2 border-gray-400
+  h-64 w-64 border-b-2 m-2 border-gray-400 object-contain
 `;
 
 const ProductTitle = tw.div`
