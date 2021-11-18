@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Header from "./components/Header";
+import Header from "../components/Header";
 import tw from "tailwind-styled-components";
-import Product from "./components/Product";
+import Product from "../components/Product";
 
 export default function Home() {
   return (
@@ -14,52 +14,51 @@ export default function Home() {
       <Wrapper>
         {/* Header */}
         <Header />
-        <br />
-        <br />
-        <br />
         {/* Products */}
-        <Product
-          src="https://m.media-amazon.com/images/I/71rOzy4cyAL._AC_UY218_.jpg"
-          title="Harry Potter full book set(7 volumes)"
-          price={1900}
-          rating={5}
-        />
-        <Product
-          src="https://m.media-amazon.com/images/I/51xxA+6E+xL._AC_UY218_.jpg"
-          title="boAt Rockerz 450 wireless noise cancellation premium exotic headsets"
-          rating={4}
-          price={1299}
-        />
-        <Product
-          src="https://m.media-amazon.com/images/I/5195vZz6kSL._AC_UL320_.jpg"
-          title="Wisdom diamonds 10.78 carat"
-          price={4000}
-          rating={4}
-        />
-        <Product
-          src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1610108113/Croma%20Assets/Gaming/Gaming%20Consoles/Images/231644_fq1z6s.png/mxw_1242,f_auto"
-          title="Sony Playstation 5 Digital Edition 825GB SSD"
-          price={39990}
-          rating={5}
-        />
-        <Product
-          src="https://m.media-amazon.com/images/I/71Bl+JlWzJL._AC_UY218_.jpg"
-          title="AmazonBasics 50-Inch Lightweight Tripod with Bag"
-          price={599}
-          rating={5}
-        />
-        <Product
-          src="https://m.media-amazon.com/images/I/71FutyZQeXL._AC_UY218_.jpg"
-          title="eAirtec 61 cms (24 inches) HD Ready LED TV 24DJ (Black) (2020 Model)"
-          price={6999}
-          rating={4}
-        />
-        <Product
-          src="https://m.media-amazon.com/images/I/716R-UhEB+L._AC_UY218_.jpg"
-          title="2020 Apple MacBook Pro - Silver"
-          price={169000}
-          rating={5}
-        />
+        <ProductGrid>
+          <Product
+            src="https://m.media-amazon.com/images/I/71rOzy4cyAL._AC_UY218_.jpg"
+            title="Harry Potter full book set(7 volumes)"
+            price={1900}
+            rating={5}
+          />
+          <Product
+            src="https://m.media-amazon.com/images/I/51xxA+6E+xL._AC_UY218_.jpg"
+            title="boAt Rockerz 450 wireless noise cancellation premium exotic headsets"
+            rating={4}
+            price={1299}
+          />
+          <Product
+            src="https://m.media-amazon.com/images/I/5195vZz6kSL._AC_UL320_.jpg"
+            title="Wisdom diamonds 10.78 carat"
+            price={4000}
+            rating={4}
+          />
+          <Product
+            src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1610108113/Croma%20Assets/Gaming/Gaming%20Consoles/Images/231644_fq1z6s.png/mxw_1242,f_auto"
+            title="Sony Playstation 5 Digital Edition 825GB SSD"
+            price={39990}
+            rating={5}
+          />
+          <Product
+            src="https://m.media-amazon.com/images/I/71Bl+JlWzJL._AC_UY218_.jpg"
+            title="AmazonBasics 50-Inch Lightweight Tripod with Bag"
+            price={599}
+            rating={5}
+          />
+          <Product
+            src="https://m.media-amazon.com/images/I/71FutyZQeXL._AC_UY218_.jpg"
+            title="eAirtec 61 cms (24 inches) HD Ready LED TV 24DJ (Black) (2020 Model)"
+            price={6999}
+            rating={4}
+          />
+          <Product
+            src="https://m.media-amazon.com/images/I/716R-UhEB+L._AC_UY218_.jpg"
+            title="2020 Apple MacBook Pro - Silver"
+            price={169000}
+            rating={5}
+          />
+        </ProductGrid>
         <br />
       </Wrapper>
     </>
@@ -67,5 +66,9 @@ export default function Home() {
 }
 
 const Wrapper = tw.div`
-  h-screen bg-gray-200
+  min-h-screen bg-gray-200 pt-20 
+`;
+
+const ProductGrid = tw.div`
+grid grid-cols-product-grid-mobile md:grid-cols-product-grid max-w-none md:max-w-7xl mx-auto
 `;

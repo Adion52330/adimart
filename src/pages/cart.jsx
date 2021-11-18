@@ -1,6 +1,6 @@
 import React from "react";
 import tw from "tailwind-styled-components";
-import Header from "./components/Header";
+import Header from "../components/Header";
 import { useSelector } from "react-redux";
 import { selectItems } from "../slices/basketSlice";
 import { useDispatch } from "react-redux";
@@ -12,16 +12,10 @@ const Cart = () => {
   return (
     <Wrapper>
       <Header />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div className="h-28" />
       <Title>Your Cart</Title>
-      <br />
-      <br />
-      <br />
       {items.length === 0 ? (
-        <Title>Your Cart is empty. Add items to start.</Title>
+        <Title className="mt-5">Your Cart is empty. Add items to start.</Title>
       ) : (
         items.map((item) => {
           return (
@@ -71,7 +65,7 @@ const Wrapper = tw.div`
 `;
 
 const Title = tw.div`
-  flex justify-center text-3xl font-bold px-5
+  flex justify-center text-3xl font-bold px-5 
 `;
 
 const ProductImage = tw.img`
