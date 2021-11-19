@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        "product-grid": "repeat(auto-fill, minmax(360px, 1fr))",
+        "product-grid": "repeat(auto-fill, minmax(360px, 1fr));",
         "product-grid-mobile":
           "grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));",
       },
