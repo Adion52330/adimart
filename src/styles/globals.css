@@ -18,3 +18,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.product-grid {
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+}
+
+@media screen and (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
