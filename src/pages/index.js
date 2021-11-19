@@ -15,7 +15,7 @@ export default function Home() {
         {/* Header */}
         <Header />
         {/* Products */}
-        <ProductGrid>
+        <ProductGrid className="product-grid">
           <Product
             src="https://m.media-amazon.com/images/I/71rOzy4cyAL._AC_UY218_.jpg"
             title="Harry Potter full book set(7 volumes)"
@@ -70,5 +70,5 @@ const Wrapper = tw.div`
 `;
 
 const ProductGrid = tw.div`
-grid grid-cols-product-grid-mobile md:grid-cols-product-grid max-w-none md:max-w-7xl mx-auto
+grid max-w-none md:max-w-7xl mx-auto
 `;
